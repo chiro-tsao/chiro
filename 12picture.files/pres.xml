@@ -1,0 +1,60 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <p:presentation sizeof="screen" gridspacingx="46448" gridspacingy="46448">
+  <p:master id="3" slidesn="0,0" type="main" href="master03.htm"
+   xmlhref="master03.xml" template="預設簡報設計" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#808080,#000000,#00CC99,#3333CC,#CCCCFF,#B2B2B2"/>
+    <p:colorscheme
+     colors="#0000FF,#FFFFFF,#000000,#FFFF00,#FF9900,#00FFFF,#FF0000,#969696"/>
+    <p:colorscheme
+     colors="#FFFFCC,#000000,#666633,#808000,#339933,#800000,#0033CC,#FFCC66"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#333333,#000000,#DDDDDD,#808080,#4D4D4D,#EAEAEA"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#808080,#000000,#FFCC66,#0000FF,#CC00CC,#C0C0C0"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#808080,#000000,#C0C0C0,#0066FF,#FF0000,#009900"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#808080,#000000,#3399FF,#99FFCC,#CC00CC,#B2B2B2"/>
+   </p:schemes>
+  </p:master>
+  <p:slide id="1" slidesn="1C494AF,876FDF60" href="slide0001.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="2" slidesn="1C494B0,F209F3F0" href="slide0002.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="3" slidesn="1C494B2,769062C0" href="slide0003.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="4" slidesn="1C494B2,BAF38EB0" href="slide0004.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="5" slidesn="1C494B2,FB9BAE70" href="slide0005.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="6" slidesn="1C494B3,70B0FA80" href="slide0006.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="7" slidesn="1C494B3,FC2B75E0" href="slide0007.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="8" slidesn="1C494B4,2E7BB5A0" href="slide0008.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="9" slidesn="1C494B4,5FCE3470" href="slide0009.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="10" slidesn="1C494B4,8D055EA0" href="slide0010.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="11" slidesn="1C494B4,B126CA30" href="slide0011.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:slide id="12" slidesn="1C494B4,F0DBFE70" href="slide0012.htm"
+   layout="2_columns" slots="title,object,body"/>
+  <p:viewstate type="slideView" slidehref="slide0012.htm" restoredleft="172"
+   restoredtop="946" manualadjustleft="t" hideoutlineicons="t"/>
+  <p:font name="Times New Roman" charset="0" type="6" family="18"/>
+  <p:font name="新細明體" charset="136" type="6" family="18"/>
+  <p:font name="Arial" charset="0" type="6" family="34"/>
+  <p:pptdocumentsettings framecolors="WhiteTextOnBlack" hideslideanimation="t"
+   browsersupport="v4"/>
+ </p:presentation>
+ <o:shapedefaults v:ext="edit" spidmax="31752">
+  <o:colormru v:ext="edit" colors="#f30"/>
+ </o:shapedefaults></xml>
