@@ -252,4 +252,144 @@ window.addEventListener('DOMContentLoaded', event => {
 
     generateVideoList("youtube-video1", youtubeVideoNameList1, youtubeVideoLinkList1);
     generateVideoList("youtube-video2", youtubeVideoNameList2, youtubeVideoLinkList2);
+
+
+    // Video 播放
+    let playlistData1 = [
+        {
+            title: "2024年6月 北京",
+            defaultOpen: true,
+            videos: [
+                { title: "视频01", src: "../video/ct/20240624-26 Beijing/322.mp4" },
+                { title: "视频02", src: "../video/ct/20240624-26 Beijing/IMG_7718.mp4" },
+                { title: "视频03", src: "../video/ct/20240624-26 Beijing/IMG_7742.mp4" },
+                { title: "视频04", src: "../video/ct/20240624-26 Beijing/IMG_7650.mp4" }
+            ]
+        },
+        {
+            title: "2024年12月 广州",
+            defaultOpen: false,
+            videos: [
+                { title: "视频01", src: "../video/ct/20241214-16 Guangzhou/IMG_4592.mp4" },
+                { title: "视频02", src: "../video/ct/20241214-16 Guangzhou/IMG_4601.mp4" }
+            ]
+        },
+        {
+            title: "2024年12月 杭州",
+            defaultOpen: false,
+            videos: [
+                { title: "视频01", src: "../video/ct/20241221-23 Hangzhou/IMG_4795.mp4" }
+            ]
+        }
+    ];
+
+    let playlistData2 = [
+        {
+            title: "2024年3月 台北",
+            defaultOpen: true,
+            videos: [
+                { title: "视频01", src: "../video/ex/20240301-03 Taipei/692.mp4" },
+                { title: "视频02", src: "../video/ex/20240301-03 Taipei/693.mp4" },
+                { title: "视频03", src: "../video/ex/20240301-03 Taipei/533281090438430935.mp4" },
+                { title: "视频04", src: "../video/ex/20240301-03 Taipei/IMG_0798.mp4" },
+                { title: "视频05", src: "../video/ex/20240301-03 Taipei/IMG_6697.mp4" },
+                { title: "视频06", src: "../video/ex/20240301-03 Taipei/IMG_6702.mp4" },
+                { title: "视频07", src: "../video/ex/20240301-03 Taipei/video_533270946983969140-vEiNPUDl.mp4" },
+                { title: "视频08", src: "../video/ex/20240301-03 Taipei/video_533271923988890017-K7yrbcIM.mp4" },
+                { title: "视频09", src: "../video/ex/20240301-03 Taipei/video_533282621141811474-WijJbMZv.mp4" }
+            ]
+        },
+        {
+            title: "2024年6月 北京",
+            defaultOpen: false,
+            videos: [
+                { title: "视频01", src: "../video/ex/20240624-26 Beijing/IMG_7650.mp4" },
+                { title: "视频02", src: "../video/ex/20240624-26 Beijing/IMG_7775.mp4" },
+                { title: "视频03", src: "../video/ex/20240624-26 Beijing/IMG_7805.mp4" },
+                { title: "视频04", src: "../video/ex/20240624-26 Beijing/IMG_7806.mp4" },
+                { title: "视频05", src: "../video/ex/20240624-26 Beijing/IMG_7807.mp4" },
+                { title: "视频06", src: "../video/ex/20240624-26 Beijing/IMG_7808.mp4" }
+            ]
+        },
+        {
+            title: "2024年12月 广州",
+            defaultOpen: false,
+            videos: [
+                { title: "视频01", src: "../video/ex/20241214-16 Guangzhou/IMG_4528.mp4" },
+                { title: "视频02", src: "../video/ex/20241214-16 Guangzhou/IMG_4540.mp4" },
+                { title: "视频03", src: "../video/ex/20241214-16 Guangzhou/IMG_4541.mp4" }
+            ]
+        }
+    ];
+
+    function generateVideoPlayer(vpID, vpname, mv) {
+        const container = document.getElementById(vpID);
+        const video = document.createElement('video');
+        video.id = mv;
+        video.controls = true;
+        video.controlsList = "nodownload";
+        video.oncontextmenu = () => false;
+
+        const source = document.createElement('source');
+        source.src = vpname; // 可更換為實際路徑
+        source.type = "video/mp4";
+
+        video.appendChild(source);
+        container.appendChild(video);
+    }
+
+    function generatePlaylist(pl, playlistData, mv) {
+
+
+        const container = document.getElementById(pl);
+
+        playlistData.forEach((group, index) => {
+            const groupDiv = document.createElement('div');
+            groupDiv.className = "playlist-group";
+
+            const header = document.createElement('div');
+            header.className = "playlist-header";
+            header.textContent = group.title;
+
+            const itemsDiv = document.createElement('div');
+            itemsDiv.className = "playlist-items";
+            if (group.defaultOpen) {
+                itemsDiv.style.display = 'block';
+            }
+
+            group.videos.forEach(video => {
+                const item = document.createElement('div');
+                item.className = "playlist-item";
+                item.textContent = video.title;
+                item.onclick = () => playVideo(video.src, mv);
+                itemsDiv.appendChild(item);
+            });
+
+            header.onclick = () => {
+                // 收起其他清單
+                document.querySelectorAll('.playlist-items').forEach(el => {
+                    el.style.display = 'none';
+                });
+                // 展開當前
+                itemsDiv.style.display = 'block';
+            };
+
+            groupDiv.appendChild(header);
+            groupDiv.appendChild(itemsDiv);
+            container.appendChild(groupDiv);
+        });
+    }
+
+    function playVideo(src, mv) {
+        const player = document.getElementById(mv);
+        player.src = src;
+        player.play();
+    }
+
+    window.onload = function () {
+        generateVideoPlayer("videoPlayer1", "../video/ct/20240624-26 Beijing/322.mp4", "mainVideo1");
+        generateVideoPlayer("videoPlayer2", "../video/ex/20240301-03 Taipei/692.mp4", "mainVideo2");
+        generatePlaylist("playlist1", playlistData1, "mainVideo1");
+        generatePlaylist("playlist2", playlistData2, "mainVideo2");
+    };
 });

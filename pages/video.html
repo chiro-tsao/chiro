@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="../pages/tecinfo.html">讲师介绍</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../pages/video.html">课程试看</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/video.html">影片专区</a></li>
                     <li class="nav-item"><a class="nav-link" href="../pages/contact.html">联系方式</a></li>
                     <li class="nav-item"><a class="nav-link" href="../pages/slide.html">半脱位脊椎骨之图解</a></li>
                 </ul>
@@ -34,10 +34,10 @@
     <header class="masthead" id="video-page">
         <div class="container">
             <div class="masthead-subheading">中华脊椎健康研究中心</div>
-            <div class="masthead-heading text-uppercase">课程试看</div>
+            <div class="masthead-heading text-uppercase">影片专区</div>
         </div>
     </header>
-    <!-- Video list-->
+
     <section class="page-section bg-light" id="bulletinboard">
         <div class="container">
             <div class="text-center">
@@ -45,109 +45,115 @@
                 <br>
             </div>
             <div class="row text-center">
-                <div class="col-md-3">
-                    <a class="nav-link" href="#youku1">
+                <div class="col-md-4">
+                    <a class="nav-link" href="#video1">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-film fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Youku</h4>
-                        <p class="text-muted">
-                            全脊椎矫正-菁英速成班<br>
-                            (点击查看更多)
-                        </p>
+                        <h4 class="my-3">课程试看</h4>
                     </a>
                 </div>
-                <div class="col-md-3">
-                    <a class="nav-link" href="#youku2">
+                <div class="col-md-4">
+                    <a class="nav-link" href="#video2">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-film fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Youku</h4>
-                        <p class="text-muted">
-                            寰枢椎-神迹矫正班<br>
-                            (点击查看更多)
-                        </p>
+                        <h4 class="my-3">临床调整</h4>
                     </a>
                 </div>
-                <div class="col-md-3">
-                    <a class="nav-link" href="#youtube1">
+                <div class="col-md-4">
+                    <a class="nav-link" href="#video3">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-brands fa-youtube fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-film fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Youtube</h4>
-                        <p class="text-muted">
-                            全脊椎矫正-菁英速成班<br>
-                            (点击查看更多)
-                        </p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a class="nav-link" href="#youtube2">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-brands fa-youtube fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Youtube</h4>
-                        <p class="text-muted">
-                            寰枢椎-神迹矫正班<br>
-                            (点击查看更多)
-                        </p>
+                        <h4 class="my-3">学习心得</h4>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Youku1-->
-    <section class="page-section course-pic" id="youku1">
+
+    <!-- Video list-->
+    <section class="page-section course-pic" id="video1">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Youku</h2>
-                <h3 class="section-subheading text-muted">全脊椎矫正-菁英速成班</h3>
-                <table class=".nav-link ct-table" id="youku-video1">
-
-                </table>
+                <h2 class="section-heading text-uppercase">课程试看</h2>
+                <br>
+            </div>
+            <!--Youtube and Youku Onlion-->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="youku1-tab" data-bs-toggle="tab"
+                        data-bs-target="#youku1-tab-pane" type="button" role="tab" aria-controls="youku1-tab-pane"
+                        aria-selected="true">
+                        <h4 class="my-3">Youku<br>全脊椎矫正-菁英速成班</h4>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="youku2-tab" data-bs-toggle="tab" data-bs-target="#youku2-tab-pane"
+                        type="button" role="tab" aria-controls="youku2-tab-pane" aria-selected="false">
+                        <h4 class="my-3">Youku<br>寰枢椎-神迹矫正班</h4>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="youtube1-tab" data-bs-toggle="tab" data-bs-target="#youtube1-tab-pane"
+                        type="button" role="tab" aria-controls="youtube1-tab-pane" aria-selected="true">
+                        <h4 class="my-3">Youtube<br>全脊椎矫正-菁英速成班</h4>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="youtube2-tab" data-bs-toggle="tab" data-bs-target="#youtube2-tab-pane"
+                        type="button" role="tab" aria-controls="youtube2-tab-pane" aria-selected="false">
+                        <h4 class="my-3">Youtube<br>寰枢椎-神迹矫正班</h4>
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content text-center" id="myTabContent">
+                <div class="tab-pane fade show active" id="youku1-tab-pane" role="tabpanel" aria-labelledby="youku1-tab"
+                    tabindex="0">
+                    <table class=".nav-link ct-table" id="youku-video1"></table>
+                </div>
+                <div class="tab-pane fade" id="youku2-tab-pane" role="tabpanel" aria-labelledby="youku2-tab"
+                    tabindex="0">
+                    <table class=".nav-link ct-table" id="youku-video2"></table>
+                </div>
+                <div class="tab-pane fade" id="youtube1-tab-pane" role="tabpanel" aria-labelledby="youtube1-tab"
+                    tabindex="0">
+                    <table class=".nav-link ct-table" id="youtube-video1"></table>
+                </div>
+                <div class="tab-pane fade" id="youtube2-tab-pane" role="tabpanel" aria-labelledby="youtube2-tab"
+                    tabindex="0">
+                    <table class=".nav-link ct-table" id="youtube-video2"></table>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Youku2-->
-    <section class="page-section course-pic bg-light" id="youku2">
+    <!--Class Test-->
+    <section class="page-section bg-light" id="video2">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">临床调整</h2>
+            <br>
+        </div>
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Youku</h2>
-                <h3 class="section-subheading text-muted">寰枢椎-神迹矫正班</h3>
-                <table class=".nav-link ct-table" id="youku-video2">
-
-                </table>
-            </div>
+            <div class="video-section" id="videoPlayer1"></div>
+            <div class="playlist-section" id="playlist1"></div>
         </div>
     </section>
-    <!-- Youtube1-->
-    <section class="page-section course-pic" id="youtube1">
+    <!--Experience-->
+    <section class="page-section" id="video3">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">学习心得</h2>
+            <br>
+        </div>
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Youtube</h2>
-                <h3 class="section-subheading text-muted">全脊椎矫正-菁英速成班</h3>
-                <table class=".nav-link ct-table" id="youtube-video1">
-
-                </table>
-            </div>
+            <div class="video-section" id="videoPlayer2"></div>
+            <div class="playlist-section" id="playlist2"></div>
         </div>
     </section>
-    <!-- Youtube2-->
-    <section class="page-section course-pic bg-light" id="youtube2">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Youtube</h2>
-                <h3 class="section-subheading text-muted">寰枢椎-神迹矫正班</h3>
-                <table class=".nav-link ct-table" id="youtube-video2">
 
-                </table>
-            </div>
-        </div>
-    </section>
     <!-- Footer-->
 
 

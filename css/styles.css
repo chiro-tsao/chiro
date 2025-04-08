@@ -13317,3 +13317,81 @@ section#contact form#contactForm :-ms-input-placeholder {
   position: relative;
   bottom: 8rem;
 }
+
+#video2 .container,
+#video3 .container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.video-section {
+  flex: 2;
+  min-width: 300px;
+  padding-right: 20px;
+}
+
+.video-section video {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-section {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.playlist-group {
+  border-top: 1px solid #ccc;
+}
+
+.playlist-group:first-child {
+  border-top: none;
+}
+
+.playlist-header {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #adadad;
+  color: black;
+  cursor: pointer;
+  user-select: none;
+}
+
+.playlist-items {
+  display: none;
+  background-color: #f9f9f9;
+}
+
+.playlist-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.playlist-item:hover {
+  background-color: #e6e6e6;
+}
+
+@media screen and (max-width: 768px) {
+  #video2 .container {
+    flex-direction: column;
+  }
+
+  .video-section {
+    padding-right: 0;
+  }
+
+  .playlist-section {
+    margin-top: 20px;
+  }
+}

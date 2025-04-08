@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>影片播放 + 分類播放清單</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .video-section {
+            flex: 2;
+            min-width: 300px;
+            padding-right: 20px;
+        }
+
+        .video-section video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .playlist-section {
+            flex: 1;
+            min-width: 250px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .playlist-group {
+            border-top: 1px solid #ccc;
+        }
+
+        .playlist-group:first-child {
+            border-top: none;
+        }
+
+        .playlist-header {
+            padding: 12px;
+            font-size: 16px;
+            background-color: #adadad;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .playlist-items {
+            display: none;
+            background-color: #f9f9f9;
+        }
+
+        .playlist-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .playlist-item:hover {
+            background-color: #e6e6e6;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .video-section {
+                padding-right: 0;
+            }
+
+            .playlist-section {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- 影片播放區 -->
+        <div class="video-section" id="videoPlayer1"></div>
+
+        <!-- 播放清單區 -->
+        <div class="playlist-section" id="playlist1"></div>
+    </div>
+
+    <script>
+        function generateVideoPlayer() {
+            const container = document.getElementById('videoPlayer1');
+            const video = document.createElement('video');
+            video.id = "mainVideo";
+            video.controls = true;
+
+            const source = document.createElement('source');
+            source.src = "invalid-path.mp4"; // 可更換為實際路徑
+            source.type = "video/mp4";
+
+            video.appendChild(source);
+            container.appendChild(video);
+        }
+
+        function generatePlaylist() {
+            const playlistData = [
+                {
+                    title: "旅行影片",
+                    defaultOpen: true,
+                    videos: [
+                        { title: "台北遊", src: "invalid1.mp4" },
+                        { title: "高雄行", src: "invalid2.mp4" }
+                    ]
+                },
+                {
+                    title: "活動紀錄",
+                    defaultOpen: false,
+                    videos: [
+                        { title: "跨年晚會", src: "invalid3.mp4" },
+                        { title: "學校運動會", src: "invalid4.mp4" }
+                    ]
+                },
+                {
+                    title: "家庭影片",
+                    defaultOpen: false,
+                    videos: [
+                        { title: "媽媽煮菜", src: "invalid5.mp4" },
+                        { title: "全家聚餐", src: "invalid6.mp4" }
+                    ]
+                }
+            ];
+
+            const container = document.getElementById('playlist1');
+
+            playlistData.forEach((group, index) => {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = "playlist-group";
+
+                const header = document.createElement('div');
+                header.className = "playlist-header";
+                header.textContent = group.title;
+
+                const itemsDiv = document.createElement('div');
+                itemsDiv.className = "playlist-items";
+                if (group.defaultOpen) {
+                    itemsDiv.style.display = 'block';
+                }
+
+                group.videos.forEach(video => {
+                    const item = document.createElement('div');
+                    item.className = "playlist-item";
+                    item.textContent = video.title;
+                    item.onclick = () => playVideo(video.src);
+                    itemsDiv.appendChild(item);
+                });
+
+                header.onclick = () => {
+                    // 收起其他清單
+                    document.querySelectorAll('.playlist-items').forEach(el => {
+                        el.style.display = 'none';
+                    });
+                    // 展開當前
+                    itemsDiv.style.display = 'block';
+                };
+
+                groupDiv.appendChild(header);
+                groupDiv.appendChild(itemsDiv);
+                container.appendChild(groupDiv);
+            });
+        }
+
+        function playVideo(src) {
+            const player = document.getElementById("mainVideo");
+            player.src = src;
+            player.play();
+        }
+
+        window.onload = function () {
+            generateVideoPlayer();
+            generatePlaylist();
+        };
+    </script>
+</body>
+
+</html>
