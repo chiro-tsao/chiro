@@ -260,9 +260,7 @@ window.addEventListener('DOMContentLoaded', event => {
             title: "2024年6月 北京",
             defaultOpen: true,
             videos: [
-                {
-                    title: "视频01", src: "https://1drv.ms/v/c/e1ab4b9229175146/IQSVQiqm_BWISZioyZJpfkcFAXAMIN7nfNq-QtYy2W_fVFY"
-                },
+                { title: "视频01", src: "../video/ct/20240624-26 Beijing/322.mp4" },
                 { title: "视频02", src: "../video/ct/20240624-26 Beijing/IMG_7718.mp4" },
                 { title: "视频03", src: "../video/ct/20240624-26 Beijing/IMG_7742.mp4" },
                 { title: "视频04", src: "../video/ct/20240624-26 Beijing/IMG_7650.mp4" }
