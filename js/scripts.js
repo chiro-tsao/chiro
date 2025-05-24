@@ -296,7 +296,15 @@ window.addEventListener('DOMContentLoaded', event => {
                 { title: "视频06", src: "../video/ex/20240301-03 Taipei/IMG_6702.mp4" },
                 { title: "视频07", src: "../video/ex/20240301-03 Taipei/video_533270946983969140-vEiNPUDl.mp4" },
                 { title: "视频08", src: "../video/ex/20240301-03 Taipei/video_533271923988890017-K7yrbcIM.mp4" },
-                { title: "视频09", src: "../video/ex/20240301-03 Taipei/video_533282621141811474-WijJbMZv.mp4" }
+                { title: "视频09", src: "../video/ex/20240301-03 Taipei/video_533282621141811474-WijJbMZv.mp4" },
+                { title: "视频10", src: "../video/ex/20240301-03 Taipei/7a3e1918af04a3e41cfcc30349401e4e.mp4" },
+                { title: "视频11", src: "../video/ex/20240301-03 Taipei/18b17ebb2c48058d030a006e95cb71f8.mp4" },
+                { title: "视频12", src: "../video/ex/20240301-03 Taipei/81af54647167a68ffb7d1a391f8eadf8.mp4" },
+                { title: "视频13", src: "../video/ex/20240301-03 Taipei/93b0b68b3fbfceadd2ded62b60ac895a.mp4" },
+                { title: "视频14", src: "../video/ex/20240301-03 Taipei/7813d3d6ab1a41e80c3cd5d8b177e594.mp4" },
+                { title: "视频15", src: "../video/ex/20240301-03 Taipei/488958eee82e39838206da1dfa3e172d.mp4" },
+                { title: "视频16", src: "../video/ex/20240301-03 Taipei/aa17dc6f792a7e2c3f488f30de183291.mp4" },
+                { title: "视频17", src: "../video/ex/20240301-03 Taipei/bdd015f91869be380c90b2a0ed7d25d6.mp4" }
             ]
         },
         {
@@ -309,6 +317,18 @@ window.addEventListener('DOMContentLoaded', event => {
                 { title: "视频04", src: "../video/ex/20240624-26 Beijing/IMG_7806.mp4" },
                 { title: "视频05", src: "../video/ex/20240624-26 Beijing/IMG_7807.mp4" },
                 { title: "视频06", src: "../video/ex/20240624-26 Beijing/IMG_7808.mp4" }
+            ]
+        },
+        {
+            title: "2024年12月 杭州",
+            defaultOpen: false,
+            videos: [
+                { title: "视频01", src: "../video/ex/20240624-26 Hangzhou/5f4bbe568bf728813debd4e2242b5bab.mp4" },
+                { title: "视频02", src: "../video/ex/20240624-26 Hangzhou/62b30689207dc45844f19305a2563950.mp4" },
+                { title: "视频03", src: "../video/ex/20240624-26 Hangzhou/129a9b06b890fecdb38882eac0afd579.mp4" },
+                { title: "视频04", src: "../video/ex/20240624-26 Hangzhou/796ee8784d19ed3ff6c0358d2da5aed8.mp4" },
+                { title: "视频05", src: "../video/ex/20240624-26 Hangzhou/4750eff99b55c6909e2b6364c88bbda3.mp4" },
+                { title: "视频06", src: "../video/ex/20240624-26 Hangzhou/bd603a1d80532304da66c45fc392ed5e.mp4" }
             ]
         },
         {
