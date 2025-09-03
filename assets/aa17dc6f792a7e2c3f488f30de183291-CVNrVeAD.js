@@ -1,0 +1,1 @@
+const a=""+new URL("aa17dc6f792a7e2c3f488f30de183291-DXmxFVHS.mp4",import.meta.url).href;export{a as default};
