@@ -6,9 +6,11 @@
   <script>
     (function () {
       var path = window.location.pathname;
-      if (path === '/' || path === '') return;
-      var hash = '#!' + path;
-      window.location.replace(window.location.origin + '/' + hash);
+      var prefix = path.startsWith('/chiro/') || path === '/chiro' ? '/chiro' : '';
+      var targetPath = prefix ? path : path;
+      if (targetPath === '/' || targetPath === '' || targetPath === '/index.html') return;
+      sessionStorage.redirect = targetPath + window.location.search;
+      window.location.replace(prefix + '/index.html');
     })();
   </script>
 </head>
